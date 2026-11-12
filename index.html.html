@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Nabilah, S.T. - Personal Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            bg: '#FDFBF7',
+                            card: '#FFFFFF',
+                            primary: '#6C5CE7',
+                            primaryLight: '#E8E5FA',
+                            secondary: '#6E85B7',
+                            sage: '#85A389',
+                            sageLight: '#EAF1EC',
+                            rose: '#E8A0BF',
+                            roseLight: '#FCEEF3',
+                            textDark: '#2D3436',
+                            textMuted: '#636E72',
+                            border: '#F0ECE9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2D3436;
+        }
+        .glass-nav {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(108, 92, 231, 0.08);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-pastel-textDark selection:bg-pastel-primaryLight selection:text-pastel-primary">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-pastel-border transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-pastel-textDark hover:text-pastel-primary transition flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-pastel-primaryLight text-pastel-primary flex items-center justify-center font-semibold text-sm">AN</span>
+                Ana Nabilah<span class="text-xs font-normal text-pastel-textMuted px-2 py-0.5 rounded-full bg-slate-100">S.T.</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-pastel-textMuted">
+                <a href="#about" class="hover:text-pastel-primary transition">About</a>
+                <a href="#experience" class="hover:text-pastel-primary transition">Experience</a>
+                <a href="#achievements" class="hover:text-pastel-primary transition">Achievements</a>
+                <a href="#skills" class="hover:text-pastel-primary transition">Skills</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-pastel-primary text-white font-medium hover:bg-opacity-90 transition shadow-sm hover:shadow-md">
+                    Contact Me
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-pastel-textDark focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-pastel-card border-b border-pastel-border px-6 py-4 space-y-3">
+            <a href="#about" class="block text-pastel-textMuted hover:text-pastel-primary py-1">About</a>
+            <a href="#experience" class="block text-pastel-textMuted hover:text-pastel-primary py-1">Experience</a>
+            <a href="#achievements" class="block text-pastel-textMuted hover:text-pastel-primary py-1">Achievements</a>
+            <a href="#skills" class="block text-pastel-textMuted hover:text-pastel-primary py-1">Skills</a>
+            <a href="#contact" class="block w-full text-center px-4 py-2 rounded-full bg-pastel-primary text-white font-medium">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden">
+        <!-- Background Pastel Decorative Orbs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-pastel-primaryLight rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-pastel-sageLight rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+        <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-pastel-roseLight rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pastel-sageLight text-pastel-sage text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-leaf text-xs"></i> Agro-Industrial Technology Graduate & Operations Specialist
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-pastel-textDark leading-tight">
+                        A journey of <br class="hidden sm:inline"/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-pastel-primary via-purple-600 to-pastel-sage">
+                            knowledge, care & impact
+                        </span>
+                    </h1>
+                    
+                    <p class="text-lg text-pastel-textMuted max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        Hello! I'm <strong class="text-pastel-textDark">Ana Nabilah, S.T.</strong> A dedicated professional with expertise in administrative management, quality control (QA/QC), data analysis, and financial customer service. Driven by operational efficiency and quality standards.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#contact" class="px-7 py-3.5 rounded-full bg-pastel-primary text-white font-semibold hover:bg-opacity-90 transition shadow-md hover:shadow-lg flex items-center gap-2">
+                            <i class="fa-regular fa-envelope"></i> Get In Touch
+                        </a>
+                        <a href="http://linkedin.com/in/ananabilah7" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full bg-white border border-pastel-border text-pastel-textDark font-semibold hover:bg-slate-50 transition shadow-sm flex items-center gap-2">
+                            <i class="fa-brands fa-linkedin text-blue-600"></i> LinkedIn Profile
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="pt-8 border-t border-pastel-border grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-bold text-pastel-primary">3.60</p>
+                            <p class="text-xs text-pastel-textMuted">Bachelor GPA (S.T)</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-pastel-sage">BNSP</p>
+                            <p class="text-xs text-pastel-textMuted">HACCP Certified</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-pastel-rose font-semibold">2+ Yrs</p>
+                            <p class="text-xs text-pastel-textMuted">Work Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Profile Photo -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Decorative Frame Background -->
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-pastel-primaryLight via-pastel-roseLight to-pastel-sageLight rounded-3xl transform rotate-3 transition duration-500 group-hover:rotate-1 opacity-80 blur-sm"></div>
+                        
+                        <div class="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] rounded-2xl overflow-hidden bg-white shadow-xl border-4 border-white flex justify-center items-end">
+                            <!-- Direct Google Drive image preview link with fallback SVG -->
+                            <img src="https://lh3.googleusercontent.com/d/1sIuzdZHnuzvN9C_vEa-KoTiAUbPeVdvQ" 
+                                 alt="Ana Nabilah, S.T." 
+                                 class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x500/E8E5FA/6C5CE7?text=Ana+Nabilah+S.T.';" />
+                        </div>
+
+                        <!-- Badge Overlay -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-pastel-border flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-pastel-sageLight flex items-center justify-center text-pastel-sage">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-pastel-textDark">Copyright Holder</p>
+                                <p class="text-[10px] text-pastel-textMuted">Functional Salt Module (Kemenkumham)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white border-y border-pastel-border relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pastel-primary mb-2">About Me</h2>
+                <h3 class="text-3xl font-bold text-pastel-textDark">Bridging Science, Quality & Operational Care</h3>
+                <div class="w-12 h-1 bg-pastel-primary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-pastel-textMuted leading-relaxed">
+                    <p>
+                        I am an Agro-Industrial Technology graduate from <strong class="text-pastel-textDark">Trunojoyo University of Madura</strong> with a GPA of 3.60. I possess a strong background in administrative management, quality control (QC/QA), product research, and online financial customer service.
+                    </p>
+                    <p>
+                        Proficient in analyzing complex data using statistical tools such as <strong class="text-pastel-textDark">SPSS, Minitab, and Advanced Excel</strong>, I am dedicated to document precision, SOP compliance, and continuous operational improvement.
+                    </p>
+                    <p>
+                        Demonstrated leadership skills through organizational roles such as Head of Public Relations & Information Division, as well as active involvement in community development projects and entrepreneurship programs.
+                    </p>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl bg-pastel-bg border border-pastel-border space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-pastel-primaryLight text-pastel-primary flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h4 class="font-bold text-pastel-textDark">Customer Service & Admin</h4>
+                        <p class="text-xs text-pastel-textMuted">Account verification, PayLater resolution, & digital archiving.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-pastel-bg border border-pastel-border space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-pastel-sageLight text-pastel-sage flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="font-bold text-pastel-textDark">Quality Assurance & QC</h4>
+                        <p class="text-xs text-pastel-textMuted">BNSP HACCP certified, physical-chemical inspection, & CCP documentation.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-pastel-bg border border-pastel-border space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-pastel-roseLight text-pastel-rose flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h4 class="font-bold text-pastel-textDark">Data Analytics</h4>
+                        <p class="text-xs text-pastel-textMuted">Quantitative data processing with SPSS, Minitab, and Excel.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-pastel-bg border border-pastel-border space-y-2">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-100 text-yellow-600 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h4 class="font-bold text-pastel-textDark">Public Relations & Media</h4>
+                        <p class="text-xs text-pastel-textMuted">National Seminar Speaker & Student Association PR Division Lead.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pastel-primary mb-2">Career Journey</h2>
+                <h3 class="text-3xl font-bold text-pastel-textDark">Professional Experience</h3>
+                <div class="w-12 h-1 bg-pastel-sage mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-pastel-border ml-4 md:ml-32 space-y-12">
+
+                <!-- Exp 1 (Point 3 Revision: Updated title to Customer Service – Finance Project) -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-pastel-primary border-4 border-white shadow-sm group-hover:scale-125 transition"></div>
+                    
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-pastel-primary bg-pastel-primaryLight px-3 py-1 rounded-full w-28 text-center">
+                        Aug 2025 - Present
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow hover:border-pastel-primary transition">
+                        <span class="md:hidden inline-block text-xs font-semibold text-pastel-primary bg-pastel-primaryLight px-3 py-1 rounded-full mb-3">
+                            Aug 2025 - Present
+                        </span>
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-pastel-textDark">Customer Service – Finance Project</h4>
+                            <span class="text-xs font-medium text-pastel-textMuted bg-slate-100 px-3 py-1 rounded-full">Teleperformance Indonesia, Yogyakarta</span>
+                        </div>
+                        <ul class="text-sm text-pastel-textMuted space-y-2 list-disc list-inside">
+                            <li>Handled customer inquiries regarding PayLater services, loan features, and account verification through chat and email.</li>
+                            <li>Executed precise data checking, data entry, and internal account updates according to strict financial SOPs.</li>
+                            <li>Supported quality control activities by ensuring case accuracy, reporting completeness, and proper escalation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-pastel-sage border-4 border-white shadow-sm group-hover:scale-125 transition"></div>
+                    
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-pastel-sage bg-pastel-sageLight px-3 py-1 rounded-full w-28 text-center">
+                        Mar 2023 - Jul 2025
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow hover:border-pastel-sage transition">
+                        <span class="md:hidden inline-block text-xs font-semibold text-pastel-sage bg-pastel-sageLight px-3 py-1 rounded-full mb-3">
+                            Mar 2023 - Jul 2025
+                        </span>
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-pastel-textDark">Administrative Staff</h4>
+                            <span class="text-xs font-medium text-pastel-textMuted bg-slate-100 px-3 py-1 rounded-full">MIS Mambaudda'wah</span>
+                        </div>
+                        <ul class="text-sm text-pastel-textMuted space-y-2 list-disc list-inside">
+                            <li>Managed student and staff databases digitally using Microsoft Excel and Google Sheets.</li>
+                            <li>Prepared periodic administrative evaluation reports and maintained cloud-based document archiving systems.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-pastel-rose border-4 border-white shadow-sm group-hover:scale-125 transition"></div>
+                    
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-pastel-rose bg-pastel-roseLight px-3 py-1 rounded-full w-28 text-center">
+                        May 2024 - Jun 2024
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow hover:border-pastel-rose transition">
+                        <span class="md:hidden inline-block text-xs font-semibold text-pastel-rose bg-pastel-roseLight px-3 py-1 rounded-full mb-3">
+                            May 2024 - Jun 2024
+                        </span>
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-pastel-textDark">Field Education Consultant Intern</h4>
+                            <span class="text-xs font-medium text-pastel-textMuted bg-slate-100 px-3 py-1 rounded-full">PT Ruang Raya Indonesia (Ruangguru)</span>
+                        </div>
+                        <ul class="text-sm text-pastel-textMuted space-y-2 list-disc list-inside">
+                            <li>Collected and analyzed market data to understand customer needs and educational trends.</li>
+                            <li>Coordinated educational marketing campaigns and distributed learning evaluation materials.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 4 (Point 2 & Point 4 Revision: Detailed QC testing & accurate HACCP scope) -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-yellow-400 border-4 border-white shadow-sm group-hover:scale-125 transition"></div>
+                    
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-yellow-700 bg-yellow-100 px-3 py-1 rounded-full w-28 text-center">
+                        Feb 2022 - Jul 2022
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow hover:border-yellow-400 transition">
+                        <span class="md:hidden inline-block text-xs font-semibold text-yellow-700 bg-yellow-100 px-3 py-1 rounded-full mb-3">
+                            Feb 2022 - Jul 2022
+                        </span>
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-pastel-textDark">Quality Control & HACCP Intern</h4>
+                            <span class="text-xs font-medium text-pastel-textMuted bg-slate-100 px-3 py-1 rounded-full">PT Marinal Indoprima Sumenep</span>
+                        </div>
+                        <ul class="text-sm text-pastel-textMuted space-y-2 list-disc list-inside">
+                            <li>Conducted routine quality inspections covering salinity (salt content), moisture content, organoleptic evaluation, color, net weight, and foreign matter detection.</li>
+                            <li>Maintained HACCP documentation, production line CCP monitoring logs, and quality inspection reports to support internal audit readiness.</li>
+                            <li>Inputted daily production data into Excel-based tracking systems and assisted in raw material quality evaluation with local suppliers.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="achievements" class="py-20 bg-white border-y border-pastel-border">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pastel-primary mb-2">Recognition & Badges</h2>
+                <h3 class="text-3xl font-bold text-pastel-textDark">Awards & Professional Certifications</h3>
+                <div class="w-12 h-1 bg-pastel-primary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-pastel-bg border border-pastel-border hover:shadow-lg transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-pastel-primaryLight text-pastel-primary flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-[11px] font-semibold text-pastel-primary uppercase tracking-wider">Ministry of Law & Human Rights (2022)</span>
+                    <h4 class="text-base font-bold text-pastel-textDark">Copyright Holder</h4>
+                    <p class="text-xs text-pastel-textMuted leading-relaxed">
+                        Copyright granted for published module: "Functional Salt Processing Techniques Using Alur Plants to Reduce Hypertension".
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-pastel-bg border border-pastel-border hover:shadow-lg transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-pastel-sageLight text-pastel-sage flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <span class="text-[11px] font-semibold text-pastel-sage uppercase tracking-wider">BNSP (2023)</span>
+                    <h4 class="text-base font-bold text-pastel-textDark">HACCP Certification</h4>
+                    <p class="text-xs text-pastel-textMuted leading-relaxed">
+                        Certified in Hazard Analysis & Critical Control Points by the Indonesian National Professional Certification Board.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-pastel-bg border border-pastel-border hover:shadow-lg transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-pastel-roseLight text-pastel-rose flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <span class="text-[11px] font-semibold text-pastel-rose uppercase tracking-wider">Ministry of Education (2022)</span>
+                    <h4 class="text-base font-bold text-pastel-textDark">PKM & Entrepreneurship Award</h4>
+                    <p class="text-xs text-pastel-textMuted leading-relaxed">
+                        Recipient of Student Creativity Program (Written Futuristic Ideas) Incentive Award & Entrepreneurship Funding.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl bg-pastel-bg border border-pastel-border hover:shadow-lg transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-microphone text-lg"></i>
+                    </div>
+                    <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider">Padjadjaran University (2022)</span>
+                    <h4 class="text-base font-bold text-pastel-textDark">National Seminar Speaker</h4>
+                    <p class="text-xs text-pastel-textMuted leading-relaxed">
+                        Guest speaker at the National Seminar on Agro-Industrial Technology presenting food innovation research.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="p-6 rounded-2xl bg-pastel-bg border border-pastel-border hover:shadow-lg transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <span class="text-[11px] font-semibold text-purple-600 uppercase tracking-wider">Gresik Regency Govt (2022)</span>
+                    <h4 class="text-base font-bold text-pastel-textDark">Top 10 Innovation Finalist</h4>
+                    <p class="text-xs text-pastel-textMuted leading-relaxed">
+                        Top 10 Finalist in Gresik Regency Innovation Competition with initiative on "Approaches to Address Stunting".
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="p-6 rounded-2xl bg-pastel-bg border border-pastel-border hover:shadow-lg transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="text-[11px] font-semibold text-amber-600 uppercase tracking-wider">MySkill Certified (2025)</span>
+                    <h4 class="text-base font-bold text-pastel-textDark">Professional Certifications</h4>
+                    <p class="text-xs text-pastel-textMuted leading-relaxed">
+                        Completed badges in B2B Sales, Customer Service, CRM, Quality Assurance, Product Management, & MS Excel Advanced.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Point 1 & Point 2 Revision: Competency categories without arbitrary percentages, accurate HACCP/CCP terms) -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pastel-primary mb-2">Competencies</h2>
+                <h3 class="text-3xl font-bold text-pastel-textDark">Technical & Soft Skills</h3>
+                <div class="w-12 h-1 bg-pastel-rose mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Technical Expertise -->
+                <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow">
+                    <h4 class="text-lg font-bold text-pastel-textDark mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-gear text-pastel-primary"></i> Technical Expertise
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-xl bg-pastel-bg border border-pastel-border">
+                            <span class="text-xs font-bold text-pastel-primary block">Quality Control & Laboratory Testing</span>
+                            <p class="text-xs text-pastel-textMuted mt-0.5">Salinity, moisture content, organoleptic, color, weight, & foreign matter inspection.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-pastel-bg border border-pastel-border">
+                            <span class="text-xs font-bold text-pastel-primary block">HACCP & Food Safety Compliance</span>
+                            <p class="text-xs text-pastel-textMuted mt-0.5">HACCP documentation, CCP monitoring logs, & internal audit preparation (BNSP Certified).</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-pastel-bg border border-pastel-border">
+                            <span class="text-xs font-bold text-pastel-primary block">Statistical Data Processing</span>
+                            <p class="text-xs text-pastel-textMuted mt-0.5">Quantitative analysis and quality reporting using SPSS, Minitab, & Excel.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-pastel-bg border border-pastel-border">
+                            <span class="text-xs font-bold text-pastel-primary block">Administration & Record Management</span>
+                            <p class="text-xs text-pastel-textMuted mt-0.5">SOP compliance verification, periodic reporting, & systematic digital archiving.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Managerial Skills -->
+                <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow">
+                    <h4 class="text-lg font-bold text-pastel-textDark mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-pastel-rose"></i> Managerial Skills
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Effective Communication</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Leadership & Teamwork</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Time Management</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Problem Solving</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Material Procurement</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Customer Relations</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-pastel-roseLight text-pastel-rose text-xs font-semibold">Project Management</span>
+                    </div>
+                </div>
+
+                <!-- Software & Tools -->
+                <div class="bg-white p-6 rounded-2xl border border-pastel-border soft-shadow">
+                    <h4 class="text-lg font-bold text-pastel-textDark mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-desktop text-pastel-sage"></i> Software & Tools
+                    </h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-pastel-bg text-xs font-semibold text-pastel-textDark">
+                            <i class="fa-solid fa-file-excel text-green-600"></i> MS Excel Advanced
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-pastel-bg text-xs font-semibold text-pastel-textDark">
+                            <i class="fa-brands fa-google text-blue-500"></i> Google Workspace
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-pastel-bg text-xs font-semibold text-pastel-textDark">
+                            <i class="fa-solid fa-chart-simple text-purple-600"></i> SPSS & Minitab
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-pastel-bg text-xs font-semibold text-pastel-textDark">
+                            <i class="fa-solid fa-palette text-cyan-600"></i> Canva Design
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-pastel-bg text-xs font-semibold text-pastel-textDark">
+                            <i class="fa-solid fa-cloud text-indigo-500"></i> Cloud Archiving
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-lg bg-pastel-bg text-xs font-semibold text-pastel-textDark">
+                            <i class="fa-solid fa-language text-slate-600"></i> TOEFL ITP (English)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Organization -->
+    <section class="py-20 bg-white border-t border-pastel-border">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl font-bold text-pastel-textDark mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-pastel-primaryLight text-pastel-primary flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </span>
+                        Education
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="p-5 rounded-2xl bg-pastel-bg border border-pastel-border">
+                            <span class="text-xs font-semibold text-pastel-primary">August 2019 - March 2023</span>
+                            <h4 class="text-lg font-bold text-pastel-textDark mt-1">Trunojoyo University of Madura</h4>
+                            <p class="text-sm font-medium text-pastel-textMuted">Bachelor of Agro-Industrial Technology (GPA: 3.60/4.00)</p>
+                            <p class="text-xs text-pastel-textMuted mt-2">Thesis: Agricultural Product Processing & Development</p>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-pastel-bg border border-pastel-border">
+                            <span class="text-xs font-semibold text-pastel-sage">August 2021 - January 2022</span>
+                            <h4 class="text-lg font-bold text-pastel-textDark mt-1">Gorontalo State University</h4>
+                            <p class="text-sm font-medium text-pastel-textMuted">Merdeka Campus Student Exchange Program (GPA: 3.65/4.00)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organization -->
+                <div>
+                    <h3 class="text-2xl font-bold text-pastel-textDark mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-pastel-sageLight text-pastel-sage flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        Organizational Experience
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl border border-pastel-border">
+                            <h4 class="font-bold text-pastel-textDark text-sm">Head of Public Relations & Information Division</h4>
+                            <p class="text-xs text-pastel-textMuted">Agro-Industrial Technology Student Association (2022)</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-pastel-border">
+                            <h4 class="font-bold text-pastel-textDark text-sm">Public Relations Coordinator</h4>
+                            <p class="text-xs text-pastel-textMuted">Halal Campaign - Trunojoyo University (2022)</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-pastel-border">
+                            <h4 class="font-bold text-pastel-textDark text-sm">Head of Documentation, Publication & Design (DPD)</h4>
+                            <p class="text-xs text-pastel-textMuted">SAN Chapter Gresik (2022 - 2023)</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-pastel-border">
+                            <h4 class="font-bold text-pastel-textDark text-sm">Executive Secretary for Social Service Program</h4>
+                            <p class="text-xs text-pastel-textMuted">Leato Beach, Gorontalo (2022)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-pastel-border soft-shadow text-center relative z-10">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pastel-primary mb-2">Contact</h2>
+                <h3 class="text-3xl font-bold text-pastel-textDark mb-4">Let's Connect & Collaborate!</h3>
+                <p class="text-pastel-textMuted text-sm max-w-lg mx-auto mb-8 leading-relaxed">
+                    I am open to new career opportunities, project collaborations, or inquiries regarding QA/QC, Finance Administration, and Operations.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 text-left">
+                    <a href="mailto:ananabilah10@gmail.com" class="p-4 rounded-2xl bg-pastel-bg border border-pastel-border hover:border-pastel-primary transition flex flex-col items-center text-center group">
+                        <div class="w-10 h-10 rounded-full bg-pastel-primaryLight text-pastel-primary flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <span class="text-xs text-pastel-textMuted">Email</span>
+                        <span class="text-xs font-bold text-pastel-textDark mt-1">ananabilah10@gmail.com</span>
+                    </a>
+
+                    <a href="https://wa.me/6281259511676" target="_blank" class="p-4 rounded-2xl bg-pastel-bg border border-pastel-border hover:border-pastel-sage transition flex flex-col items-center text-center group">
+                        <div class="w-10 h-10 rounded-full bg-pastel-sageLight text-pastel-sage flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <span class="text-xs text-pastel-textMuted">WhatsApp</span>
+                        <span class="text-xs font-bold text-pastel-textDark mt-1">+62 812 5951 1676</span>
+                    </a>
+
+                    <a href="http://linkedin.com/in/ananabilah7" target="_blank" class="p-4 rounded-2xl bg-pastel-bg border border-pastel-border hover:border-blue-500 transition flex flex-col items-center text-center group">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <span class="text-xs text-pastel-textMuted">LinkedIn</span>
+                        <span class="text-xs font-bold text-pastel-textDark mt-1">ananabilah7</span>
+                    </a>
+                </div>
+
+                <!-- Interactive Quick Message Form -->
+                <form id="contactForm" class="space-y-4 text-left max-w-xl mx-auto" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" id="name" required placeholder="Your Name" class="w-full px-4 py-3 rounded-xl bg-pastel-bg border border-pastel-border text-sm focus:outline-none focus:border-pastel-primary">
+                        <input type="email" id="email" required placeholder="Your Email" class="w-full px-4 py-3 rounded-xl bg-pastel-bg border border-pastel-border text-sm focus:outline-none focus:border-pastel-primary">
+                    </div>
+                    <textarea id="message" rows="4" required placeholder="Your Message..." class="w-full px-4 py-3 rounded-xl bg-pastel-bg border border-pastel-border text-sm focus:outline-none focus:border-pastel-primary"></textarea>
+                    
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-pastel-primary text-white font-semibold hover:bg-opacity-90 transition shadow-md">
+                        Send Message
+                    </button>
+                </form>
+
+                <div id="formAlert" class="hidden mt-4 p-3 rounded-xl text-xs font-medium bg-pastel-sageLight text-pastel-sage">
+                    Thank you! Your message has been sent successfully.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white border-t border-pastel-border text-center text-xs text-pastel-textMuted">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© 2026 Ana Nabilah, S.T. All rights reserved.</p>
+            <p>Designed with <i class="fa-solid fa-heart text-pastel-rose"></i> Pastel Minimalist Theme</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const alertBox = document.getElementById('formAlert');
+            
+            alertBox.innerText = `Thank you ${name}, your message has been sent!`;
+            alertBox.classList.remove('hidden');
+
+            document.getElementById('contactForm').reset();
+
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
